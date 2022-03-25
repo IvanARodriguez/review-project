@@ -26,8 +26,8 @@ genBtn.addEventListener("click", buttonHandler);
 
 
 //getting the number from user input
-let getUserChoice = async ()=>{
-    userInput = await document.getElementById("userChoice").value
+let getUserChoice = ()=>{
+    userInput =  document.getElementById("userChoice").value
     if(userInput < 6 || userInput > 50){
         document.querySelector(".validationError").innerHTML = "Your choice was wrong, enter a number from 6 to 50";
         return document.getElementById("password").value = "";
@@ -59,7 +59,7 @@ const sendAnswer = async ()=>{
 getPromptNum.addEventListener("click", sendAnswer);
 
 
-//button than closes the modal
+//handle button than closes the modal
 const closeModalBtn = document.querySelector('.closeBtn');
 function closeModal(){ 
     document.querySelector(".modal").classList.add("hide");
